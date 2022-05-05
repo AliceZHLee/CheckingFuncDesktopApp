@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\ICE_icon.PNG" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\ICE_icon.PNG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Prism.Wpf" Version="8.1.97" />
+    <PackageReference Include="System.Collections.NonGeneric" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ICEChecker.ModuleCheckerInput\ICEChecker.ModuleCheckerInput.csproj" />
+    <ProjectReference Include="..\ICEChecker.ModuleCheckerOutput\ICEChecker.ModuleCheckerOutput.csproj" />
+    <ProjectReference Include="..\ICEFixAdapter\ICEFixAdapter.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,137 @@
+﻿<Window x:Class="ICEChecker.HelpWindow.HelpView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ICEChecker.HelpWindow"
+        mc:Ignorable="d"
+        Title="HelpView" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key="btnStyle" TargetType="{x:Type Button}">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="Margin" Value="20,10,20,20"/>
+            <Setter Property="Padding" Value="10,20,10,20"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Color="#F7F9F9" Offset="0.0"/>
+                        <GradientStop Color="#DAE0E2" Offset="0.5"/>
+                        <GradientStop Color="#C5C8C9" Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <!--<Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>-->
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="0.8" BorderBrush="Gray" CornerRadius="5" Padding="10,5,10,5">
+                            <ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualStateGroup.Transitions>
+                                        <VisualTransition GeneratedDuration="0:0:0.4">
+                                            <VisualTransition.GeneratedEasingFunction>
+                                                <QuinticEase EasingMode="EaseOut"/>
+                                            </VisualTransition.GeneratedEasingFunction>
+                                        </VisualTransition>
+                                    </VisualStateGroup.Transitions>
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver"/>
+                                    <VisualState x:Name="Disabled"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter Property="BorderBrush" TargetName="border" Value="#95a0f3"/>
+                                <Setter Property="BorderThickness" TargetName="border" Value="1"/>
+                                <Setter Property="Foreground"  Value="White"/>
+                                <Setter Property="Background" TargetName="border">
+                                    <Setter.Value>
+                                        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                            <GradientStop Color="#95a0f3" Offset="0.0"/>
+                                            <GradientStop Color="#7782d5" Offset="1.0"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True" >
+                                <Setter Property="Cursor" Value="Hand"/>
+                                <Setter TargetName="border" Property="Background" Value="#808bde"/>
+                                <Setter Property="Foreground"  Value="White"/>
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel Margin="10">
+                <TextBlock TextWrapping="Wrap" FontSize="16" Text="User Guide" Margin="0,0,0,10"/>
+                <TextBlock TextWrapping="Wrap" Margin="0,1"  >
+                    <Run Text="1. This app can only get current trading day's ICE data"/>
+                    <!--<Run Text="(EXCLUDE deals from WebICE source)" FontWeight="Bold"/>-->
+                    
+                </TextBlock>
+                <StackPanel VerticalAlignment="Center"  Margin="0,1">
+                    <TextBlock TextWrapping="Wrap" Text="2. There are three methods to insert 'to-check' data"/>
+                    <TextBlock TextWrapping="Wrap" Text="Insert daily record by uploading the excel file and define the sheet name, OR" />
+                    <TextBlock TextWrapping="Wrap" Text="directly paste data in table, OR" />
+                    <TextBlock TextWrapping="Wrap" Text="double click the cell to manually type in" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,1">
+                    <TextBlock TextWrapping="Wrap" Text="3. When checking starts, the unchecked API feeds will be highlighted in "/>
+                    <Rectangle Fill="#f8d1e0" Width="30" Height="10" VerticalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,1">
+                    <TextBlock TextWrapping="Wrap" Text="4. Mapped API feeds are highlighted in "/>
+                    <Rectangle Fill="#6cca88" Width="30" Height="10" VerticalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,1">
+                    <TextBlock TextWrapping="Wrap" Text="5. Busted API feeds are in "/>
+                    <Rectangle Fill="LightGray" Width="30" Height="10" VerticalAlignment="Center"/>
+                </StackPanel>
+                <TextBlock TextWrapping="Wrap" Margin="0,1">
+                    <Run Text="6. You can click one particular"/>
+                    <Run Text="consistent" Foreground="#229965" FontWeight="Bold"/>
+                    <Run Text="/"/>
+                    <Run Text="inconsistent"  Foreground="#ff8257" FontWeight="Bold"/>
+                    <Run Text="record to view its"/>
+                    <Run Text=" matched API feed " Background="#6cca88" />
+                    <Run Text="or"/>
+                    <Run Text=" similar feed(s) " Background="#ff8257" />
+                    <Run Text="in the feed window"/>
+                </TextBlock>
+                <StackPanel Orientation="Horizontal" Margin="0,1">
+                    <TextBlock TextWrapping="Wrap" Text="7. Inconsistent record will highlight the different fields in "/>
+                    <Rectangle Fill="Yellow" Width="30" Height="10" VerticalAlignment="Center"/>
+                </StackPanel>
+                <TextBlock TextWrapping="Wrap" Margin="0,1">
+                    <Run Text="8. The status of snapshot deals will start with"/>
+                    <Run Text="lowercase" FontWeight="Bold"/>
+                    <Run Text="letter ('cancel', 'trade', 'bilateral')."/>
+                    <Run Text="The status of live update deals will start with"/>
+                    <Run Text="Capital" FontWeight="Bold"/>
+                    <Run Text="letter ('Cancel', 'Trade', 'Bilateral', 'Bust-Adjust', 'Replace')."/>
+                </TextBlock> 
+            </StackPanel>
+        </ScrollViewer>
+
+        <Button Grid.Row="1" Content="Close" HorizontalAlignment="Right" Margin="20" Click="Close_click" Style="{StaticResource btnStyle}"/>
+
+    </Grid>
+
+</Window>

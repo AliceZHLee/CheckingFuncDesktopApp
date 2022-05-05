@@ -26,6 +26,7 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+[Gg]enerator
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -220,6 +221,7 @@ ClientBin/
 *.dbmdl
 *.dbproj.schemaview
 *.jfm
+*.pfx
 *.publishsettings
 orleans.codegen.cs
 

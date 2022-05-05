@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Prism.Wpf" Version="8.1.97" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ICEChecker.Core\ICEChecker.Core.csproj" />
+    <ProjectReference Include="..\ICEChecker.ModuleCheckerInput\ICEChecker.ModuleCheckerInput.csproj" />
+  </ItemGroup>
+
+</Project>

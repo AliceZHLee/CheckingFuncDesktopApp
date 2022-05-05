@@ -1,0 +1,49 @@
+Fuel  Oil Futures Spr - Marine 0.5% FOB Sing (Platts);0.50%
+Fuel  Oil Futures (balmo) - Marine 0.5% FOB Sing (Platts);0.50%
+Fuel  Oil Futures - Marine 0.5% FOB Sing (Platts);0.50%
+Gasoil Futures Spr - Sing Gasoil 0.05% (Platts);500
+Gasoil Futures (balmo) - Sing Gasoil 0.05% (Platts);500
+Gasoil Futures - Sing Gasoil 0.05% (Platts);500
+LS GO 1st Line/Brent 1st Line;10 Crack
+Sing Gasoil 10ppm (Platts)/Dubai 1st Line (Platts);10 Deb Crk
+Sing Gasoil 0.05% (Platts)/Dubai 1st Line (Platts);10 Deb Crk
+Sing Gasoil 10ppm (Platts);10ppm
+180cst Sing/Brent 1st Line;180 Crack
+180cst Sing/3.5% FOB Rdam Bg;180 EW
+Fuel Oil Futures - 180cst Sing;180cst
+Fuel Oil Futures Spr - 180cst Sing;180cst
+Fuel Oil Futures (balmo) - 180cst Sing;180cst
+380cst Sing/Brent 1st Line;380 Crack
+380cst Sing/3.5% FOB Rdam Bg;380 EW
+Fuel Oil Futures - 380cst Sing;380cst
+Fuel Oil Futures Spr - 380cst Sing;380cst
+Fuel Oil Futures (balmo) - 380cst Sing;380cst
+Brent 1st Line/Dubai 1st Line;B/D EWSS
+Fuel Oil Futures - 3.5% FOB Rdam Bg ;Barge
+Fuel Oil Futures Spr - 3.5% FOB Rdam Bg ;Barge
+Fuel Oil Futures (balmo) - 3.5% FOB Rdam Bg ;Barge
+3.5% FOB Rdam Bg/Brent 1st Line;Barge Crack
+3.5% FOB Rdam Bg (Platts)/Brent 1st Line;Barge Crack
+Brent Crude Futures;Brent
+Crude Futures - Brent 1st Line;Brent_S
+Crude Futures Spr - Brent 1st Line;Brent_S
+Dubai 1st Line Mini;Dubai_S
+Sing Gasoil 0.05% (Platts)/LS GO 1st Line;EWSS
+Sing Gasoil 10ppm (Platts)/LS GO 1st Line;EWSS
+Sing Gasoil 10ppm (platts)/Sing Gasoil 0.05% (Platts);EWSS
+Marine 0.5% FOB Sing (Platts)/380cst Sing (Platts) ;Hi5
+Low Sulphur Gasoil Futures;IPE
+Low Sulphur Gasoil 1st Line Futures;IPEs
+Jet Fuel Futures (balmo) - Sing Kero;Kero
+Jet Fuel Futures - Sing Kero;Kero
+Jet Fuel Futures Spr - Sing Kero;Kero
+Naphtha Futures - Naphtha C&F Japan;MOPJ
+Naphtha Futures (balmo) - Naphtha C&F Japan;MOPJ
+Naphtha Futures Spr - Naphtha C&F Japan;MOPJ
+Naphtha C&F Japan (Platts)/Brent 1st Line;mopj/brn
+Naphtha CIF NWE Cg;NWE
+Naphtha CIF NWE Cg (Platts)/Brent 1st Line;nwe/brn
+Naphtha CIF NWE Cg/Brent 1st Line;nwe/brn
+Sing Kero (Platts)/Sing Gasoil;Regrade
+180cst Sing/380cst Sing;Visco
+WTI Crude Futures;WTI

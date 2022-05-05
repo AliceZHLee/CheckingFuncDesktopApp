@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NLog" Version="4.7.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="QuickFix">
+      <HintPath>..\..\..\..\LocalSavedGitHubCode(personal use)\quickfixn\Messages\FIX44\bin\Debug\netstandard2.0\QuickFix.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickFix.FIX44">
+      <HintPath>..\..\..\..\LocalSavedGitHubCode(personal use)\quickfixn\Messages\FIX44\bin\Debug\netstandard2.0\QuickFix.FIX44.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="config\fix.cfg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="spec\fix\FIX44.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

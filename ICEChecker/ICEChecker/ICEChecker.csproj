@@ -1,0 +1,231 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net5.0-windows</TargetFramework>
+		<UseWPF>true</UseWPF>
+		<ApplicationIcon>Resources/inspection.ico</ApplicationIcon>
+		<PackageIcon>inspection.png</PackageIcon>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="config\AbbrDict.csv" />
+		<None Remove="config\AbbrList_Test.xlsx" />
+		<None Remove="config\BrokerDict.csv" />
+		<None Remove="config\config.json" />
+		<None Remove="config\SecurityDict_desc.csv" />
+		<None Remove="config\SecurityDict_HubAlias.csv" />
+		<None Remove="config\SecurityDict_lotSize.csv" />
+		<None Remove="config\SecurityDict_MIC.csv" />
+		<None Remove="config\SecurityDict_priceUnit.csv" />
+		<None Remove="config\SecurityDict_ProductName.csv" />
+		<None Remove="config\SecurityDict_QtyUnit.csv" />
+		<None Remove="config\SecurityDict_Strip.csv" />
+		<None Remove="Images\1353183085_save.png" />
+		<None Remove="Images\add.png" />
+		<None Remove="Images\copy.png" />
+		<None Remove="Images\cut.png" />
+		<None Remove="Images\dictionary.png" />
+		<None Remove="Images\export.png" />
+		<None Remove="Images\file.png" />
+		<None Remove="Images\format_painter.png" />
+		<None Remove="Images\go-next.png" />
+		<None Remove="Images\go-previous.png" />
+		<None Remove="Images\help.png" />
+		<None Remove="Images\history.png" />
+		<None Remove="Images\home.png" />
+		<None Remove="Images\options.png" />
+		<None Remove="Images\paste.png" />
+		<None Remove="Images\personal.png" />
+		<None Remove="Images\quit.png" />
+		<None Remove="Images\redo.png" />
+		<None Remove="Images\save.png" />
+		<None Remove="Images\ThemeInternationalTrd.png" />
+		<None Remove="Images\undo.png" />
+		<None Remove="Resources\FaFreeSolid.otf" />
+		<None Remove="Resources\file.png" />
+		<None Remove="Resources\help.png" />
+		<None Remove="Resources\img_home.png" />
+		<None Remove="Resources\img_setting.png" />
+		<None Remove="Resources\inspection.ico" />
+		<None Remove="Resources\inspection.png" />
+		<None Remove="Resources\logout.png" />
+		<None Remove="Resources\mapping.png" />
+		<None Remove="Resources\question.png" />
+		<None Remove="Resources\tgBtn_default.png" />
+		<None Remove="Resources\tgBtn_MouseOver.png" />
+		<None Remove="Resources\ThemeInternationalTrd.png" />
+		<None Remove="Resources\user.png" />
+		<None Remove="Resources\viewer.ico" />
+		<None Remove="Resources\viewer.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="config\AbbrDict.csv">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="config\BrokerDict.csv">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="config\config.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="config\SecurityDict_desc.csv">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="config\SecurityDict_HubAlias.csv">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="config\SecurityDict_lotSize.csv">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="config\SecurityDict_MIC.csv">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="config\SecurityDict_priceUnit.csv">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="config\SecurityDict_ProductName.csv">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="config\SecurityDict_QtyUnit.csv">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="config\SecurityDict_Strip.csv">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Images\1353183085_save.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Images\add.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Images\copy.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Images\cut.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Images\dictionary.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Images\export.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Images\format_painter.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Images\go-next.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Images\go-previous.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Images\help.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Images\history.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Images\home.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Images\options.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Images\paste.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Images\personal.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Images\quit.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Images\redo.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Images\save.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Images\ThemeInternationalTrd.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Images\undo.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\file.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\help.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\img_home.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\img_setting.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\inspection.ico">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\inspection.png">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\logout.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\mapping.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\question.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\tgBtn_default.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\tgBtn_MouseOver.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\ThemeInternationalTrd.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\user.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\viewer.ico">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\viewer.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Dragablz" Version="0.0.3.223" />
+		<PackageReference Include="Prism.Unity" Version="8.1.97" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\ICEChecker.Core\ICEChecker.Core.csproj" />
+		<ProjectReference Include="..\ICEChecker.DictWindow\ICEChecker.DictWindow.csproj" />
+		<ProjectReference Include="..\ICEChecker.HelpWindow\ICEChecker.HelpWindow.csproj" />
+		<ProjectReference Include="..\ICEChecker.LogonWindow\ICEChecker.LogonWindow.csproj" />
+		<ProjectReference Include="..\ICEChecker.ModuleCheckerInput\ICEChecker.ModuleCheckerInput.csproj" />
+		<ProjectReference Include="..\ICEChecker.ModuleCheckerOutput\ICEChecker.ModuleCheckerOutput.csproj" />
+		<ProjectReference Include="..\ICEChecker.ModuleDictionary\ICEChecker.ModuleDictionary.csproj" />
+		<ProjectReference Include="..\ICEFixAdapter\ICEFixAdapter.csproj" />
+		<ProjectReference Include="..\ModuleICEData\ICEChecker.ModuleICEData.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="Resources\FaFreeSolid.otf">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Resource>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="customcontrols\" />
+	</ItemGroup>
+
+</Project>
