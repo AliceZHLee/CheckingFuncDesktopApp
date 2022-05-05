@@ -1,0 +1,19 @@
+{
+  "Products": [
+    "FEF",
+    "MF5F",
+    "MF5",
+    "UC"
+  ],
+  "Accounts": [
+    "SG S288 B219A3",
+    "SG S288 B219A1",
+    "SG S288 B219A2",
+    "SG S288 B219A10"
+  ],
+  "AlertSetting": {
+    "AlertOn": true,
+    "Threshold": 500,
+    "ExcludeAlertForOurTrades": true
+  }
+}

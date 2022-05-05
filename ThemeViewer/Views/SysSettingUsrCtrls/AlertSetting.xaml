@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="ThemeViewer.Views.SysSettingUsrCtrls.AlertSetting"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ThemeViewer.Views.Components"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style x:Key="ErrorValidator">
+            <Setter Property="Validation.ErrorTemplate">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <StackPanel>
+                            <AdornedElementPlaceholder x:Name="placeholder" />
+                            <TextBlock FontStyle="Italic" Foreground="Red" HorizontalAlignment="Right" 
+                                       Text="{Binding ElementName=placeholder,  Path=AdornedElement.(Validation.Errors).CurrentItem.ErrorContent}" />
+                            <!--<TextBlock FontStyle="Italic" Foreground="Red" HorizontalAlignment="Right" Text="{Binding ElementName=placeholder, Path=AdornedElement.(Validation.Errors)[0].ErrorContent}" />-->
+                        </StackPanel>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <StackPanel Orientation="Vertical" Margin="10">
+        <CheckBox Content="Market tab alert sound on" Name="IsAlertOn" Margin="10" IsChecked="{Binding Path=AlertOn}" Visibility="Collapsed"/>
+        <CheckBox Content="Disable alert sound for our own trades" Name="IsExcluded" Margin="10" IsChecked="{Binding Path=IsOursTradesExcluded}" Visibility="Collapsed"/>
+
+        <GroupBox Header="Master Switch">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Market tab alert sound" Margin="10"/>
+                    <local:ToggleSwitch x:Name="AlertSwitch" Height="20" Margin="10,0,10,0" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="AlertSwitch_MouseLeftButtonDown"/>
+                    <TextBlock Name="SwitchStatus" Margin="10" Text="{Binding Path=AlertStatus}" VerticalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text='Alert Threshold for "Qty In Lots"' Margin="10"/>
+                    <TextBox Name="thresholdInput" Width="100" Style="{StaticResource ErrorValidator}" Text="{Binding Path=QtyThreshold,UpdateSourceTrigger=PropertyChanged}" Margin="10" />
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Other options" Margin="0,15,0,0">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal" >
+                    <TextBlock Text="Disable alerts for our own trades" Margin="10"/>
+                    <local:ToggleSwitch x:Name="ExcludeOurCom" Height="20" Margin="10,0,10,0" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="ExcludeOurCom_MouseLeftButtonDown"/>
+                    <TextBlock Name="SwitchStatus_Exclude" Margin="10" Text="{Binding Path=ExcludeOurTrades,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center"/>
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+    </StackPanel>
+</UserControl>
