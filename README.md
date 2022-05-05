@@ -1,12 +1,7 @@
-# README #
+# Project Goal #
 
-This README would normally document whatever steps are necessary to get your application up and running.
-
-### What is this repository for? ###
-
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+1. Apply FIX API of an Exchange to Fetch Trade Data, and 
+2. Make Comparison Function With Manual Record
 
 ### How do I get set up? ###
 
