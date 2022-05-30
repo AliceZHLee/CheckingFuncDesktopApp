@@ -1,4 +1,4 @@
-﻿<Window x:Class="ICEChecker.Views.MainWindow2"
+<Window x:Class="ICEChecker.Views.MainWindow2"
         xmlns:customcontrols="clr-namespace:ICEChecker.customcontrols"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
-        Title="ICE Checker v2.7 check today Crack" Height="700" Width="1400"
+        Title="ICE Checker v2.8" Height="700" Width="1400"
         Closing="Window_Close"
         Loaded="Window_Loaded">
     <Window.Resources>
